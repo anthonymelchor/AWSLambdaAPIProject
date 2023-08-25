@@ -49,9 +49,9 @@ Search for "DynamoDB" in the filter box labeled "Select a service" and then clic
 
 ![7](https://github.com/anthonymelchor/AWSLambdaAPIProject/assets/48603061/93a9a23e-68e2-4055-9b12-5f53d55e2dab)
 
-Now we need to select the specific permissions for the policy. Under the access level, choose 'scan', 'DeleteItem', 'UpdateItem', and 'PutItem'.
+Now we need to select the specific permissions for the policy. Under the access level, choose 'scan', 'GetItem', 'DeleteItem', 'UpdateItem', and 'PutItem'.
 
-![8](https://github.com/anthonymelchor/AWSLambdaAPIProject/assets/48603061/2e0746d5-3409-4c4b-9938-41c56911eb09)
+![8](https://github.com/anthonymelchor/AWSLambdaAPIProject/assets/48603061/2e58f2df-14c3-4470-b91a-c7c1578ec4ea)
 
 ![9](https://github.com/anthonymelchor/AWSLambdaAPIProject/assets/48603061/b670f908-7e49-4ec6-8f05-2ed3ac389f97)
 
@@ -62,6 +62,9 @@ Paste the previously copied ARN of the DynamoDB table into the field displayed b
 Name the policy "TennisPlayerDynamoDBAccess," and then click on "Create policy."
 
 ![12](https://github.com/anthonymelchor/AWSLambdaAPIProject/assets/48603061/e5b1d354-24a8-4b10-b7ba-678c5257a018)
+
+### Creating Lambda functions
+
 
 
 
