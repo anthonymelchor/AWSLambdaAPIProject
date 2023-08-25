@@ -63,10 +63,14 @@ Name the policy "TennisPlayerDynamoDBAccess," and then click on "Create policy."
 
 ![12](https://github.com/anthonymelchor/AWSLambdaAPIProject/assets/48603061/e5b1d354-24a8-4b10-b7ba-678c5257a018)
 
-### Creating Lambda functions
+### Creating Layer in Lamdba
 
+This layer will include custom runtimes that can be reused across multiple functions. This helps keep functions code clean and focused on its main logic
 
+- Navigate to the Lambda service and select the Layers option from the left menu. Then, click on Create Layer.
+- Enter 'my-layer' as the layer name. Download the file 'my-layer.zip' from this repository, and then upload it. Choose 'Python 3.11' in the Runtimes option and click on Create.
 
+![13](https://github.com/anthonymelchor/AWSLambdaAPIProject/assets/48603061/5ef2cd8c-fcd2-4d3d-ba07-7e7c7a41875c)
 
 
 
