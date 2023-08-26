@@ -68,10 +68,28 @@ Name the policy "TennisPlayerDynamoDBAccess," and then click on "Create policy."
 This layer will include custom runtimes that can be reused across multiple functions. This helps keep functions code clean and focused on its main logic
 
 - Navigate to the Lambda service and select the Layers option from the left menu. Then, click on Create Layer.
-- Enter 'my-layer' as the layer name. Download the file 'my-layer.zip' from this repository, and then upload it. Choose 'Python 3.11' in the Runtimes option and click on Create.
+- Enter 'my-layer' as the layer name. Download the file [my-layer.zip](https://github.com/anthonymelchor/AWSLambdaAPIProject/blob/master/my-layer.zip) from this repository, and then upload it. Choose 'Python 3.11' in the Runtimes option and click on Create.
 
 ![13](https://github.com/anthonymelchor/AWSLambdaAPIProject/assets/48603061/5ef2cd8c-fcd2-4d3d-ba07-7e7c7a41875c)
 
+### Creating Lambda Functions
 
+We will proceed to create four Lambda functions corresponding to CRUD operations: create_player, update_player, get_player, get_players, and delete_player.
+
+- Go to the Lambda service and select Functions. Then, click on the "Create Function" button. Choose 'Author from scratch', add 'create_player' as the name, and select Python 3.11 in the Runtime option.
+
+![14](https://github.com/anthonymelchor/AWSLambdaAPIProject/assets/48603061/7aa59fa5-a6fb-452f-9751-4c633bff7508)
+
+- Go to the Permissions section. There, under 'Change default execution role,' select the radio button 'Use an existing role,' and in the 'Existing role' option, choose the Role that was created earlier. Finally, click on "Create function."
+
+![15](https://github.com/anthonymelchor/AWSLambdaAPIProject/assets/48603061/8f9385e3-f138-4627-9c39-3954a319babe)
+
+- Enter the recently created Lambda function and replace the original Python code with this one: [create_player](https://github.com/anthonymelchor/AWSLambdaAPIProject/blob/master/create_player/app.py)
+
+![16](https://github.com/anthonymelchor/AWSLambdaAPIProject/assets/48603061/cef07659-6597-4991-98ff-1629f94d8def)
+  
+-  Scroll down to the bottom of the Code tab and click on the "Add a layer" button. Choose the 'Custom layers' option, select the layer 'my-layer' that was created earlier along with its version, and then click on the "Add" button
+
+![17](https://github.com/anthonymelchor/AWSLambdaAPIProject/assets/48603061/20b108cc-2f34-41a5-9ecf-3cb7e6374fe4)
 
 
