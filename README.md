@@ -55,6 +55,7 @@ Now we need to select the specific permissions for the policy. Under the access 
 
 ![9](https://github.com/anthonymelchor/AWSLambdaAPIProject/assets/48603061/b670f908-7e49-4ec6-8f05-2ed3ac389f97)
 
+Choose the Resources section. After selecting the Specific option, pick the Add ARN link located in the table section.
 Paste the previously copied ARN of the DynamoDB table into the field displayed below, and the remaining fields will be automatically filled. Click on Add ARNs
 
 ![11](https://github.com/anthonymelchor/AWSLambdaAPIProject/assets/48603061/4466c795-0f1b-456d-8b72-93eacff9abb2)
