@@ -92,4 +92,77 @@ We will proceed to create four Lambda functions corresponding to CRUD operations
 
 ![17](https://github.com/anthonymelchor/AWSLambdaAPIProject/assets/48603061/20b108cc-2f34-41a5-9ecf-3cb7e6374fe4)
 
+- In the same way as above, we need to create four more Lambda functions:
+
+get_player - get the code from GitHub [here](https://github.com/anthonymelchor/AWSLambdaAPIProject/blob/master/get_player/app.py)
+get_players - get the code from GitHub [here](https://github.com/anthonymelchor/AWSLambdaAPIProject/blob/master/get_players/app.py)
+update_player - get the code from GitHub [here](https://github.com/anthonymelchor/AWSLambdaAPIProject/blob/master/update_player/app.py)
+delete_player - get the code from GitHub [here](https://github.com/anthonymelchor/AWSLambdaAPIProject/blob/master/delete_player/app.py)
+
+If you follow the instructions correctly, you should see something similar to this in your AWS console:
+
+![18](https://github.com/anthonymelchor/AWSLambdaAPIProject/assets/48603061/7bb6db01-31db-4011-a9bf-14ee2acb861e)
+
+### Creating an API Gateway
+
+Now, we will create an API Gateway which interacts with a Lambda function by acting as a mediator between external requests and the Lambda function's execution. When a user makes a request through the API Gateway, the Gateway receives the request and directs it to the appropriate Lambda function based on the API route or endpoint. The Lambda function then processes the request, executes its logic, and can generate a response that is sent back through the API Gateway to the user.
+
+- Navigate to the API Gateway service and click on the "Build" button under the REST API option.
+
+![19](https://github.com/anthonymelchor/AWSLambdaAPIProject/assets/48603061/f9f84f43-55d9-4abd-90ea-da3e2421112b)
+
+- Choose the protocol as REST.
+- Click on the "New API" option.
+- Enter "TennisPlayerAPI" as the name and select "Regional" as the Endpoint Type.
+- Finally, click on the button Create API.
+- 
+![20](https://github.com/anthonymelchor/AWSLambdaAPIProject/assets/48603061/7b18a9f5-a6ea-45f5-87ca-c5cb11a02f88)
+
+- On the left-hand navigation menu, locate and click on "Resources."
+- From the dropdown menu labeled "Actions," choose "Create Resource."
+- For both the Resource Name and Resource Path, enter 'tennis-player.'
+- Make sure to select the option "Enable API Gateway CORS."
+- Finally, click on the "Create Resource" button.
+  
+![21](https://github.com/anthonymelchor/AWSLambdaAPIProject/assets/48603061/b8bf9a8e-58cb-40a7-b488-630cbbf74d76)
+
+- Choose the 'tennis-player' resource that you previously created. From the "Action" dropdown, select "Create Method."
+- A new dropdown will appear. Choose "POST" from this dropdown, and then click the checkmark.
+- For the integration type, select "Lambda Function."
+- Ensure you check the box for "Use Lambda Proxy integration."
+- Choose the appropriate Region that you're using for Lambda.
+- Enter the name of the function you previously created, which is 'create_player.'
+- Click the "Save" button to confirm the settings.
+- When prompted to grant Amazon API Gateway permission to invoke your function, select "OK."
+
+![22](https://github.com/anthonymelchor/AWSLambdaAPIProject/assets/48603061/2c9ead76-0f7f-42bc-b32c-3107b5416fe4)
+
+- Similarly to the steps outlined above, you'll need to repeat the process for the other four Lambda functions: update_player, get_player, get_players, and delete_player:
+
+POST /tennis-player (create_player)
+GET /tennis-player (get_players)
+GET /tennis-player/getPlayerById (get_player)
+PUT /tennis-player (update_player)
+DELETE /tennis-player (delete_player)
+
+![23](https://github.com/anthonymelchor/AWSLambdaAPIProject/assets/48603061/849abb86-6dd8-43be-a190-c6753a984c4f)
+
+Deploying the API:
+
+-  click on "Actions" from the Amazon API Gateway console, and then select "Deploy API." This action will prompt you to create a new stage.
+
+- From the "Deployment stage" drop-down list, choose "[New Stage]."
+
+- Enter "test" as the Stage Name.
+
+- Click "Deploy" to finalize the deployment.
+
+- Make a note of the Invoke URL that is provided. This URL will be essential for verifying the functionality of your API Gateway.
+
+![24](https://github.com/anthonymelchor/AWSLambdaAPIProject/assets/48603061/3c08a546-8cc2-47ee-ba4e-b7088f719189)
+
+![25](https://github.com/anthonymelchor/AWSLambdaAPIProject/assets/48603061/7834ef54-5d69-46f1-bb80-32366d1e71c0)
+
+
+
 
