@@ -94,10 +94,10 @@ We will proceed to create four Lambda functions corresponding to CRUD operations
 
 - In the same way as above, we need to create four more Lambda functions:
 
-get_player - get the code from GitHub [here](https://github.com/anthonymelchor/AWSLambdaAPIProject/blob/master/get_player/app.py)
-get_players - get the code from GitHub [here](https://github.com/anthonymelchor/AWSLambdaAPIProject/blob/master/get_players/app.py)
-update_player - get the code from GitHub [here](https://github.com/anthonymelchor/AWSLambdaAPIProject/blob/master/update_player/app.py)
-delete_player - get the code from GitHub [here](https://github.com/anthonymelchor/AWSLambdaAPIProject/blob/master/delete_player/app.py)
+  * get_player - get the code from GitHub [here](https://github.com/anthonymelchor/AWSLambdaAPIProject/blob/master/get_player/app.py)
+  * get_players - get the code from GitHub [here](https://github.com/anthonymelchor/AWSLambdaAPIProject/blob/master/get_players/app.py)
+  * update_player - get the code from GitHub [here](https://github.com/anthonymelchor/AWSLambdaAPIProject/blob/master/update_player/app.py)
+  * delete_player - get the code from GitHub [here](https://github.com/anthonymelchor/AWSLambdaAPIProject/blob/master/delete_player/app.py)
 
 If you follow the instructions correctly, you should see something similar to this in your AWS console:
 
