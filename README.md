@@ -163,6 +163,8 @@ Deploying the API:
 
 ![25](https://github.com/anthonymelchor/AWSLambdaAPIProject/assets/48603061/7834ef54-5d69-46f1-bb80-32366d1e71c0)
 
+### Validation the API Gateway
+
 Here, you can observe our API Gateway in action. Everything is working just as intended! :)
 
 ![27](https://github.com/anthonymelchor/AWSLambdaAPIProject/assets/48603061/47b8dbc3-566f-4cec-a065-b57c2bb549fb)
